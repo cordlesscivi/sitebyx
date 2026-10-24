@@ -26,11 +26,11 @@ window.SITE_CONFIG = {
     formEndpoint: '',
 
     /* Реквизиты компании */
-    company: 'ООО «БелАккаунт»',
-    unp: '191234567',
-    phone: '+375 (29) 123-45-67',
-    emailVisible: 'civiwalk@gmail.com',
-    address: 'г. Минск, пр-т Независимости, 100, оф. 512',
+    company: 'ООО «xxxxxx»',
+    unp: 'xxxxx',
+    phone: '+375 xxxxx',
+    emailVisible: 'xxxxxxx',
+    address: 'xxxxxx',
 
     /* Текст подтверждения (показывается в уведомлении после отправки) */
     successMessage: 'Спасибо! Заявка отправлена. Мы перезвоним вам в течение 15 минут в рабочее время.'
