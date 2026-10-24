@@ -9,7 +9,7 @@ window.SITE_CONFIG = {
        Используется в режиме mailto (кнопка «Отправить заявку»
        открывает почтовую программу с готовым письмом).
 
-       ВАЖНО: первая буква — латинская "c", не кириллическая "с"! */
+       ВАЖНО: первая буква - латинская "c", не кириллическая "с"! */
     email: 'civiwalk@gmail.com',
 
     /* Необязательно. Endpoint для отправки форм без перезагрузки страницы
@@ -17,11 +17,11 @@ window.SITE_CONFIG = {
 
        Зарегистрируйся на одном из сервисов и вставь сюда свою ссылку:
 
-       • Formspree  — https://formspree.io   (создай форму → скопируй URL)
-       • Getform    — https://getform.io     (endpoint вида https://getform.io/f/xxxx)
-       • Web3Forms  — https://web3forms.com (access_key из письма)
+       • Formspree  - https://formspree.io   (создай форму → скопируй URL)
+       • Getform    - https://getform.io     (endpoint вида https://getform.io/f/xxxx)
+       • Web3Forms  - https://web3forms.com (access_key из письма)
 
-       Если оставить пустым — сайт будет открывать почтовую программу
+       Если оставить пустым - сайт будет открывать почтовую программу
        с уже заполненным письмом (работает без всяких регистраций). */
     formEndpoint: '',
 

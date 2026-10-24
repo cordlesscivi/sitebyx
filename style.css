@@ -44,7 +44,7 @@ body {
     z-index: 1;
 }
 
-/* плоткая сетка на фоне — добавляет «матовую» текстуру без перегруза */
+/* плоткая сетка на фоне - добавляет «матовую» текстуру без перегруза */
 body::before {
     content: "";
     position: fixed;
@@ -142,8 +142,8 @@ body::before {
 
 /* =========================================================
    КНОПКИ (ЕДИНАЯ СИСТЕМА)
-   — btn-block растягивает кнопку на 100%
-   — btn-lg / btn-sm — размеры
+   - btn-block растягивает кнопку на 100%
+   - btn-lg / btn-sm - размеры
    ========================================================= */
 .btn {
     display: inline-flex;
@@ -168,7 +168,7 @@ body::before {
 .btn-lg { padding: 1rem 2.2rem; font-size: 1.05rem; min-height: 48px; }
 .btn-sm { padding: .55rem 1.3rem; font-size: .85rem; min-height: 38px; }
 
-/* Primary — синий градиент */
+/* Primary - синий градиент */
 .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
@@ -177,7 +177,7 @@ body::before {
 }
 .btn-primary:active { transform: scale(.98); }
 
-/* Accent — зелёный (CTA / отправка) */
+/* Accent - зелёный (CTA / отправка) */
 .btn-accent { background: linear-gradient(135deg, var(--accent), #059669); color: #fff; }
 .btn-accent:hover {
     background: linear-gradient(135deg, #059669, #047857);
@@ -185,7 +185,7 @@ body::before {
     box-shadow: 0 8px 20px rgba(16,185,129,.3);
 }
 
-/* Outline — прозрачные с рамкой */
+/* Outline - прозрачные с рамкой */
 .btn-outline {
     background: rgba(255,255,255,.15);
     color: #fff;
@@ -197,7 +197,7 @@ body::before {
     transform: translateY(-2px) scale(1.02);
 }
 
-/* Light outline — для светлых секций */
+/* Light outline - для светлых секций */
 .btn-outline-light {
     background: transparent;
     color: var(--secondary);
@@ -209,7 +209,7 @@ body::before {
     border-color: var(--primary);
 }
 
-/* Ghost — без рамки, только текст */
+/* Ghost - без рамки, только текст */
 .btn-ghost {
     background: transparent;
     color: var(--primary);
@@ -505,7 +505,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; position: relative
 .pricing-features li { padding: .55rem 0; color: var(--text-light); border-bottom: 1px solid rgba(0,0,0,.05); display: flex; align-items: center; gap: .6rem; }
 .pricing-features li:last-child { border-bottom: none; }
 .pricing-features li::before { content: '✓'; color: var(--accent); font-weight: 700; }
-/* кнопка всегда на одинаковом уровне — margin-top auto */
+/* кнопка всегда на одинаковом уровне - margin-top auto */
 .pricing-card .btn { margin-top: auto; }
 
 /* CTA section */
@@ -528,7 +528,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; position: relative
 .cta-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 28px rgba(16,185,129,.35); }
 
 /* =========================================================
-   REVEAL — появление элементов при скролле
+   REVEAL - появление элементов при скролле
    ========================================================= */
 .reveal {
     opacity: 0;

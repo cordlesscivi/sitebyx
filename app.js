@@ -83,7 +83,7 @@
             setTimeout(function () { toast.remove(); }, 400);
         }, 3500);
     }
-    // выносим в глобальную область — нужны кнопкам с onclick="showToast(...)"
+    // выносим в глобальную область - нужны кнопкам с onclick="showToast(...)"
     window.showToast = showToast;
 
     // ── ЭФФЕКТ РЯБИ НА КНОПКАХ ─────────────────────────────
@@ -123,7 +123,7 @@
                     var label = btn.getAttribute('data-tariff-name') || 'услуга';
                     var target = 'contact.html?tariff=' + encodeURIComponent(tariff);
                     // показываем подтверждение, пока переходим
-                    showToast('Тариф «' + label + '» выбран. Заполните заявку — мы перезвоним.', 'success');
+                    showToast('Тариф «' + label + '» выбран. Заполните заявку - мы перезвоним.', 'success');
                     setTimeout(function () { window.location.href = target; }, 700);
                 });
             }
@@ -156,9 +156,9 @@
     // ── ОТПРАВКА ФОРМЫ НА ПОЧТУ ────────────────────────────
     /**
      * Логика «Оставить заявку»:
-     * 1) Если в config.js заполнен formEndpoint — отправляем POST (fetch).
+     * 1) Если в config.js заполнен formEndpoint - отправляем POST (fetch).
      *    Подойдёт любой сервис: Formspree / Getform / Web3Forms.
-     * 2) Если endpoint пустой — открываем почтовую программу (mailto)
+     * 2) Если endpoint пустой - открываем почтовую программу (mailto)
      *    с готовым письмом на адрес из config.email.
      */
     function submitRequest(formEl, fields) {
@@ -215,7 +215,7 @@
                 })
                 .catch(function (err) {
                     console.error('Endpoint error, fallback to mailto:', err);
-                    // если сервер не ответил — пробуем через почту
+                    // если сервер не ответил - пробуем через почту
                     mailtoFallback(formEl, data, btn, originalText);
                     return false;
                 });
@@ -230,26 +230,26 @@
         var email = cfg.email;
 
         if (!email) {
-            showToast('Не указан email в config.js — некуда отправить заявку', 'error');
+            showToast('Не указан email в config.js - некуда отправить заявку', 'error');
             if (btn) { btn.textContent = originalText; btn.disabled = false; }
             return;
         }
 
-        var subject = encodeURIComponent('Заявка с сайта — ' + (data.name || 'без имени'));
+        var subject = encodeURIComponent('Заявка с сайта - ' + (data.name || 'без имени'));
         var body = encodeURIComponent(
             'Здравствуйте!\n\n' +
             'Получена заявка с сайта «Бухгалтерия Беларуси».\n\n' +
-            '— Данные клиента —\n' +
-            'Имя:        ' + (data.name || '—') + '\n' +
-            'Телефон:    ' + (data.phone || '—') + '\n' +
-            'Email:      ' + (data.email || '—') + '\n' +
-            'Услуга:     ' + (data.service || '—') + '\n\n' +
-            '— Комментарий —\n' +
-            (data.message || '—') + '\n\n' +
+            '- Данные клиента -\n' +
+            'Имя:        ' + (data.name || '-') + '\n' +
+            'Телефон:    ' + (data.phone || '-') + '\n' +
+            'Email:      ' + (data.email || '-') + '\n' +
+            'Услуга:     ' + (data.service || '-') + '\n\n' +
+            '- Комментарий -\n' +
+            (data.message || '-') + '\n\n' +
             'Отправлено автоматически с сайта.'
         );
 
-        showToast('Открывается почтовая программа — отправьте письмо, и мы вам перезвоним');
+        showToast('Открывается почтовая программа - отправьте письмо, и мы вам перезвоним');
         window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
 
         formEl.reset();
