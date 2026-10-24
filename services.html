@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены | xxxxxx</title>
+    <meta name="description" content="Подробные услуги бухгалтерии в Республике Беларусь: учёт, налоги, зарплата и аудит. Тарифы от 60 BYN/мес.">
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="blob-wrap">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="preloader" id="preloader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Загрузка…</div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">🇧🇾 xxxxx</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-outline-light btn-sm">Связаться</a>
+                <a href="services.html" class="btn btn-primary btn-sm">Тарифы</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-wrap">
+            <h1>Услуги</h1>
+            <p>Профессиональное бухгалтерское сопровождение: от учёта до налогов</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section reveal">
+            <div class="section-header">
+                <span class="badge">🇧🇾 Республика Беларусь</span>
+                <h2>Наши услуги</h2>
+                <p>Полный спектр бухгалтерских и налоговых услуг</p>
+            </div>
+
+            <div class="service-detailed">
+                <div class="service-detailed-card">
+                    <h3>Бухгалтерский учёт</h3>
+                    <p>Ведение учёта первичных документов, проводки, бухгалтерский баланс и отчётность в налоговые органы РБ.</p>
+                    <ul class="service-features">
+                        <li>Ведение книги доходов и расходов</li>
+                        <li>Бухгалтерский баланс и отчётность</li>
+                        <li>Интеграция с 1С и другими ПО</li>
+                        <li>Аудит учётной политики</li>
+                    </ul>
+                </div>
+
+                <div class="service-detailed-card">
+                    <h3>Налоговое сопровождение</h3>
+                    <p>НДС, налог на прибыль, ЕНВД и другие налоги Республики Беларусь. Консультации и подготовка отчётности.</p>
+                    <ul class="service-features">
+                        <li>Регистрация и регистрация НДС</li>
+                        <li>Налог на прибыль</li>
+                        <li>Ежемесячная отчётность</li>
+                        <li>Сопровождение в налоговых органах</li>
+                    </ul>
+                </div>
+
+                <div class="service-detailed-card">
+                    <h3>Зарплата и кадры</h3>
+                    <p>Расчёт заработной платы в BYN, страховые взносы в Белгосстрах, отчётность в налоговую и ФСЗН.</p>
+                    <ul class="service-features">
+                        <li>Расчёт зарплаты и отчётности</li>
+                        <li>Страховые взносы</li>
+                        <li>Единый налоговый регистратор</li>
+                        <li>Кадровый учёт</li>
+                    </ul>
+                </div>
+
+                <div class="service-detailed-card">
+                    <h3>Аудит и консультации</h3>
+                    <p>Проверка бухгалтерии, аудит отчётности, оптимизация налогов и консультации по законодательству РБ.</p>
+                    <ul class="service-features">
+                        <li>Аудит финансовой отчётности</li>
+                        <li>Налоговая оптимизация</li>
+                        <li>Консультации по законодательству</li>
+                        <li>Защита от мошенничества</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Тарифы</h2>
+                <p>Прозрачные цены в белорусских рублях (BYN)</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Для ИП</h3>
+                        <div class="price">120<span> BYN / мес</span></div>
+                        <p>Ведение учёта и отчётности для индивидуальных предпринимателей</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Ведение книги доходов и расходов</li>
+                        <li>Сдача налоговой отчётности</li>
+                        <li>Консультации по налогам РБ</li>
+                        <li>Поддержка в налоговой</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-tariff="ip" data-tariff-name="ИП">Выбрать тариф</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <h3>Для ООО</h3>
+                        <div class="price">250<span> BYN / мес</span></div>
+                        <p>Полное бухгалтерское сопровождение с ограниченной ответственностью</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Полный бухгалтерский учёт</li>
+                        <li>НДС и налог на прибыль</li>
+                        <li>Зарплата и кадровый учёт</li>
+                        <li>Аудит и оптимизация налогов</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-tariff="ooo" data-tariff-name="ООО">Выбрать тариф</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Для физических лиц</h3>
+                        <div class="price">60<span> BYN / мес</span></div>
+                        <p>Налоговое сопровождение и декларации для физических лиц</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Подготовка налоговой декларации</li>
+                        <li>Консультации по налогам РБ</li>
+                        <li>Помощь с вычетами</li>
+                        <li>Поддержка в налоговой</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" data-tariff="fl" data-tariff-name="физическое лицо">Выбрать тариф</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-card">
+                <div class="cta-wrap">
+                    <h2>Начните работу с нами</h2>
+                    <p>Оставьте заявку и мы подготовим индивидуальный тариф для вашего бизнеса в BYN.</p>
+                    <a href="contact.html" class="cta-btn">Запросить звонок</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">© 2026 xxxxx. Все права защищены.</p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">ООО «xxxxx» | УНП xxxxxx | xxxxxx Республика Беларусь</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+</body>
+</html>

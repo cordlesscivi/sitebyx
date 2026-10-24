@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | xxxxxx</title>
+    <meta name="description" content="Контакты бухгалтерии в Минске. Телефон +375, email, адрес. Оставьте заявку на бухгалтерское сопровождение в РБ.">
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="blob-wrap">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="preloader" id="preloader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Загрузка…</div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">🇧🇾 xxxxx</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги и цены</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-outline-light btn-sm">Контакты</a>
+                <a href="services.html" class="btn btn-primary btn-sm">Тарифы</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-wrap">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами — ответим в течение 15 минут в рабочее время</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section reveal">
+            <div class="section-header">
+                <span class="badge">🇧🇾 Республика Беларусь</span>
+                <h2>Свяжитесь с нами</h2>
+                <p>Телефон, почта, адрес и форма заявки для связи</p>
+            </div>
+
+            <div class="info-box">
+                💡 Заполните форму — мы перезвоним вам в течение 15 минут в рабочее время (Пн—Пт 09:00—18:00)
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--secondary);">Контактные данные</h3>
+                    <ul style="list-style: none; max-width: 400px; margin: 0 auto;">
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.4rem;">📞</span>
+                            <div style="text-align: left;">
+                                <div style="font-weight: 600; margin-bottom: .2rem;">Телефон</div>
+                                <a href="tel:+375xxxxx" style="color: var(--primary); font-weight: 500;">+375 xxxxx</a>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.4rem;">✉️</span>
+                            <div style="text-align: left;">
+                                <div style="font-weight: 600; margin-bottom: .2rem;">Email</div>
+                                <a href="mailto:info@xxxxx" style="color: var(--primary); font-weight: 500;">info@xxxxx</a>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.4rem;">🏢</span>
+                            <div style="text-align: left;">
+                                <div style="font-weight: 600; margin-bottom: .2rem;">Офис</div>
+                                <p>xxxxxx</p>
+                            </div>
+                        </li>
+                        <li style="padding: 1rem 0; display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.4rem;">📋</span>
+                            <div style="text-align: left;">
+                                <div style="font-weight: 600; margin-bottom: .2rem;">УНП</div>
+                                <p>xxxxx</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <h4 style="margin-bottom: 1rem; color: var(--secondary); font-size: 1rem;">Рабочие часы</h4>
+                        <div class="hours-list" id="hoursList"></div>
+                    </div>
+
+                    <div class="social-row" style="margin-top: 2rem;">
+                        <a href="https://t.me/xxxxx" class="social-btn" onclick="showToast('xxxxxx'); return false;">✈️</a>
+                        <a href="mailto:info@bel-account.by" class="social-btn">✉️</a>
+                        <a href="tel:+375291234567" class="social-btn">📞</a>
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                    <h2>Оставить заявку</h2>
+                    <p style="text-align: left; margin-bottom: 1.5rem; color: rgba(255,255,255,.8);">Заполните форму — мы свяжемся с вами в ближайшее время</p>
+                    <form class="contact-form" id="contactForm" role="contact">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Ваше имя *</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " required>
+                            <label for="phone">Телефон (+375) *</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder=" ">
+                            <label for="email">Email (необязательно)</label>
+                        </div>
+
+                        <div class="input-group">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected></option>
+                                <option value="ip">Бухгалтерия для ИП</option>
+                                <option value="ooo">Бухгалтерия для ООО</option>
+                                <option value="fl">Для физического лица</option>
+                                <option value="audit">Аудит и проверка</option>
+                                <option value="consult">Консультация</option>
+                            </select>
+                            <label for="service">Тип услуги *</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" name="message" placeholder=" " rows="4" required></textarea>
+                            <label for="message">Комментарий *</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и даете согласие на обработку персональных данных.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="section-header">
+                <h2>Карта проезда</h2>
+                <p>Мы находимся в центре Минска</p>
+            </div>
+
+            <div class="map-card">
+                <div class="map-embed">
+                    <div class="map-pin">
+                        <div class="pin-icon">📍</div>
+                        <p>xxxxx</p>
+                        <p style="font-weight: 400; font-size: .85rem; color: var(--text-light);">Минск, xxxxx, Республика Беларусь</p>
+                    </div>
+                </div>
+                <div class="map-info">
+                    <p>🚇 xxxxx</p>
+                    <p>🚌 xxxxx</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 900px; margin: 0 auto; padding: 3rem 2rem; text-align: center;">
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">© 2026 xxxx. Все права защищены.</p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">ООО «xxxx» | УНП xxxx | г. Минск, Республика Беларусь</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <!-- Inline styles needed by contact page -->
+    <style>
+        .input-group { position: relative; margin-bottom: 1.2rem; }
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%; padding: 1rem 1.25rem; border: 2px solid var(--border); border-radius: 10px;
+            font-size: 1rem; transition: var(--transition); background: var(--bg); color: var(--text); font-family: inherit;
+        }
+        .input-group select { background: var(--card); }
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+            outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(14,165,233,.1);
+        }
+        .input-group label {
+            position: absolute; left: 1.25rem; top: 1rem; color: var(--text-light); font-size: .9rem;
+            pointer-events: none; transition: var(--transition); background: transparent; padding: 0 4px;
+        }
+        .input-group input:focus ~ label,
+        .input-group input:not(:placeholder-shown) ~ label,
+        .input-group textarea:focus ~ label,
+        .input-group textarea:not(:placeholder-shown) ~ label {
+            top: -.75rem; left: .75rem; font-size: .75rem; color: var(--primary);
+            background: var(--card); padding: 0 4px; border-radius: 4px;
+        }
+        .input-group.invalid input, .input-group.invalid textarea { border-color: var(--danger); }
+        .error-msg { color: var(--danger); font-size: .78rem; margin-top: .3rem; display: none; }
+        .input-group.invalid .error-msg { display: block; }
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent), #059669); color: #fff; padding: 1rem 2rem;
+            border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer;
+            transition: var(--transition); width: 100%; margin-top: .5rem;
+            box-shadow: 0 4px 12px rgba(16,185,129,.25);
+        }
+        .submit-btn::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent); transform: translateX(-100%); transition: transform .5s ease; border-radius: 12px; }
+        .submit-btn:hover::before { transform: translateX(100%); }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(16,185,129,.35); }
+        .submit-btn:disabled { opacity: .7; cursor: not-allowed; transform: none; }
+        .form-note { font-size: .8rem; color: var(--text-light); text-align: center; margin-top: 1.5rem; line-height: 1.5; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+        .contact-section h2 { color: var(--secondary); margin-bottom: .5rem; }
+        .contact-section p { color: var(--text-light); margin-bottom: 1.5rem; }
+        .social-row { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
+        .social-btn { width: 48px; height: 48px; border-radius: 14px; background: var(--card); border: 1px solid var(--border); display: grid; place-items: center; font-size: 1.3rem; text-decoration: none; transition: var(--transition); box-shadow: var(--shadow-sm); }
+        .social-btn:hover { transform: translateY(-4px) scale(1.08); box-shadow: var(--shadow-md); border-color: var(--primary); }
+        .map-card { background: var(--card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+        .map-embed { height: 280px; background: linear-gradient(135deg, #e2e8f0, #cbd5e1); display: grid; place-items: center; position: relative; }
+        .map-pin { text-align: center; color: var(--secondary); animation: bounce 2s ease-in-out infinite; }
+        @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        .pin-icon { font-size: 2.5rem; margin-bottom: .5rem; }
+        .map-info { padding: 1.25rem; text-align: center; }
+        .map-info p { color: var(--text-light); font-size: .9rem; margin-bottom: .35rem; }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            header { padding: 5rem 2rem 3rem; margin-top: 58px; }
+            header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</body>
+</html>
